@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Broken Security</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Broken Security - لوحة التحكم</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="writeup.html">Writeups</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+                <li><a href="admin.html">Admin panel</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>new writeup</h2>
+        <form id="upload-form">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="content">content:</label>
+            <textarea id="content" name="content" rows="10" required></textarea>
+
+            <button type="button" onclick="saveWriteup()">رفع المقال</button>
+        </form>
+    </main>
+    <script>
+        function saveWriteup() {
+            const title = document.getElementById('title').value;
+            const content = document.getElementById('content').value;
+            
+            if (title && content) {
+                alert('Writeup saved: ' + title);
+                // هنا يمكنك إضافة تخزين المقال باستخدام LocalStorage أو API
+            }
+        }
+    </script>
+</body>
+</html>

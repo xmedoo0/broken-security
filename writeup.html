@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writeups - Broken Security</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const writeups = ['Title1', 'Title2']; // إضافة العناوين يدويًا هنا
+            const container = document.getElementById('writeups-container');
+
+            writeups.forEach(writeup => {
+                const article = document.createElement('article');
+                article.innerHTML = `<h3>${writeup}</h3><a href="${writeup}.html">Read more</a>`;
+                container.appendChild(article);
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Broken Security</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="writeup.html">Writeups</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>writeups</h2>
+        <div id="writeups-container"></div>
+    </main>
+</body>
+</html>
